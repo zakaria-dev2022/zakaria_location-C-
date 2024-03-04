@@ -188,5 +188,12 @@ namespace Zakaria_Location
             modifier.Enabled = false;
             supprimer.Enabled = false;
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard=new Dashboard();
+            this.Hide();
+            dashboard.Show();
+        }
     }
 }

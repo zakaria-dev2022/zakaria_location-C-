@@ -41,3 +41,5 @@ C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria Location.csproj
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria Location.csproj.CopyComplete
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria Location.exe
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria Location.pdb
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.Dashboard.resources
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormClient.resources

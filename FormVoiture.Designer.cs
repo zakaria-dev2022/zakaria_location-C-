@@ -102,9 +102,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(151, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(461, 56);
+            this.label5.Size = new System.Drawing.Size(485, 56);
             this.label5.TabIndex = 45;
-            this.label5.Text = "Gestion Des Voiture";
+            this.label5.Text = "Gestion Des Voitures";
             // 
             // panel1
             // 
@@ -139,7 +139,7 @@
             // lb_cg
             // 
             this.lb_cg.AutoSize = true;
-            this.lb_cg.Location = new System.Drawing.Point(1040, 136);
+            this.lb_cg.Location = new System.Drawing.Point(1075, 136);
             this.lb_cg.Name = "lb_cg";
             this.lb_cg.Size = new System.Drawing.Size(51, 20);
             this.lb_cg.TabIndex = 133;
@@ -149,7 +149,7 @@
             // lb_v
             // 
             this.lb_v.AutoSize = true;
-            this.lb_v.Location = new System.Drawing.Point(718, 169);
+            this.lb_v.Location = new System.Drawing.Point(753, 169);
             this.lb_v.Name = "lb_v";
             this.lb_v.Size = new System.Drawing.Size(51, 20);
             this.lb_v.TabIndex = 132;
@@ -337,7 +337,7 @@
             // lb_vt
             // 
             this.lb_vt.AutoSize = true;
-            this.lb_vt.Location = new System.Drawing.Point(740, 421);
+            this.lb_vt.Location = new System.Drawing.Point(775, 421);
             this.lb_vt.Name = "lb_vt";
             this.lb_vt.Size = new System.Drawing.Size(51, 20);
             this.lb_vt.TabIndex = 143;
@@ -347,7 +347,7 @@
             // lb_a
             // 
             this.lb_a.AutoSize = true;
-            this.lb_a.Location = new System.Drawing.Point(1040, 356);
+            this.lb_a.Location = new System.Drawing.Point(1075, 356);
             this.lb_a.Name = "lb_a";
             this.lb_a.Size = new System.Drawing.Size(51, 20);
             this.lb_a.TabIndex = 144;
@@ -359,7 +359,7 @@
             this.btn_v.BackColor = System.Drawing.Color.Teal;
             this.btn_v.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_v.ForeColor = System.Drawing.Color.White;
-            this.btn_v.Location = new System.Drawing.Point(690, 233);
+            this.btn_v.Location = new System.Drawing.Point(725, 233);
             this.btn_v.Name = "btn_v";
             this.btn_v.Size = new System.Drawing.Size(156, 50);
             this.btn_v.TabIndex = 145;
@@ -372,7 +372,7 @@
             this.btn_cg.BackColor = System.Drawing.Color.Teal;
             this.btn_cg.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cg.ForeColor = System.Drawing.Color.White;
-            this.btn_cg.Location = new System.Drawing.Point(996, 230);
+            this.btn_cg.Location = new System.Drawing.Point(1031, 230);
             this.btn_cg.Name = "btn_cg";
             this.btn_cg.Size = new System.Drawing.Size(156, 50);
             this.btn_cg.TabIndex = 146;
@@ -385,7 +385,7 @@
             this.btn_vt.BackColor = System.Drawing.Color.Teal;
             this.btn_vt.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_vt.ForeColor = System.Drawing.Color.White;
-            this.btn_vt.Location = new System.Drawing.Point(680, 448);
+            this.btn_vt.Location = new System.Drawing.Point(715, 448);
             this.btn_vt.Name = "btn_vt";
             this.btn_vt.Size = new System.Drawing.Size(156, 50);
             this.btn_vt.TabIndex = 147;
@@ -398,7 +398,7 @@
             this.btn_a.BackColor = System.Drawing.Color.Teal;
             this.btn_a.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_a.ForeColor = System.Drawing.Color.White;
-            this.btn_a.Location = new System.Drawing.Point(996, 448);
+            this.btn_a.Location = new System.Drawing.Point(1031, 448);
             this.btn_a.Name = "btn_a";
             this.btn_a.Size = new System.Drawing.Size(156, 50);
             this.btn_a.TabIndex = 148;
@@ -420,7 +420,7 @@
             // assurance
             // 
             this.assurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.assurance.Location = new System.Drawing.Point(932, 307);
+            this.assurance.Location = new System.Drawing.Point(967, 307);
             this.assurance.Margin = new System.Windows.Forms.Padding(4);
             this.assurance.Name = "assurance";
             this.assurance.Size = new System.Drawing.Size(251, 134);
@@ -431,7 +431,7 @@
             // visite
             // 
             this.visite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.visite.Location = new System.Drawing.Point(637, 306);
+            this.visite.Location = new System.Drawing.Point(672, 306);
             this.visite.Margin = new System.Windows.Forms.Padding(4);
             this.visite.Name = "visite";
             this.visite.Size = new System.Drawing.Size(251, 135);
@@ -442,7 +442,7 @@
             // ph_voiture
             // 
             this.ph_voiture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ph_voiture.Location = new System.Drawing.Point(637, 87);
+            this.ph_voiture.Location = new System.Drawing.Point(672, 87);
             this.ph_voiture.Margin = new System.Windows.Forms.Padding(4);
             this.ph_voiture.Name = "ph_voiture";
             this.ph_voiture.Size = new System.Drawing.Size(251, 135);
@@ -453,7 +453,7 @@
             // carte_grise
             // 
             this.carte_grise.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.carte_grise.Location = new System.Drawing.Point(932, 87);
+            this.carte_grise.Location = new System.Drawing.Point(967, 87);
             this.carte_grise.Margin = new System.Windows.Forms.Padding(4);
             this.carte_grise.Name = "carte_grise";
             this.carte_grise.Size = new System.Drawing.Size(251, 135);
@@ -464,12 +464,13 @@
             // exit
             // 
             this.exit.Image = global::Zakaria_Location.Properties.Resources.cross;
-            this.exit.Location = new System.Drawing.Point(1132, 13);
+            this.exit.Location = new System.Drawing.Point(1190, 13);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(61, 52);
             this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exit.TabIndex = 46;
             this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // pictureBox1
             // 

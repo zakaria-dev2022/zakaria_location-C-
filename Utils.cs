@@ -26,13 +26,13 @@ namespace Zakaria_Location
                 {
                     cnx.Open();
                     // Console.WriteLine("Connexion à la base de données ouverte avec succès.");
-                    // MessageBox.Show("Connexion à la base de données ouverte avec succès.", "Gestion Restaurant");
+                    // MessageBox.Show("Connexion à la base de données ouverte avec succès.", "Zakaria Location");
                 }
             }
             catch (Exception ex)
             {
                 // Console.WriteLine("Erreur lors de l'ouverture de la connexion : " + ex.Message);
-                //MessageBox.Show("Erreur lors de l'ouverture de la connexion : " + ex.Message, "Gestion Restaurant");
+                //MessageBox.Show("Erreur lors de l'ouverture de la connexion : " + ex.Message, "Zakaria Location");
             }
         }
 
@@ -45,13 +45,13 @@ namespace Zakaria_Location
                 {
                     cnx.Close();
                     //Console.WriteLine("Connexion à la base de données fermée avec succès.");
-                    //MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
+                    //MessageBox.Show("Connexion à la base de données fermer avec succès.", "Zakaria Location");
                 }
             }
             catch (Exception ex)
             {
                 // Console.WriteLine("Erreur lors de la fermeture de la connexion : " + ex.Message);
-                // MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
+                // MessageBox.Show("Connexion à la base de données fermer avec succès.", "Zakaria Location");
             }
         }
 
@@ -70,7 +70,7 @@ namespace Zakaria_Location
                     {
                         command.ExecuteNonQuery();
                         //Console.WriteLine($"La colonne {id} a été supprimée de la table {table} avec succès.");
-                        //MessageBox.Show($"La colonne {id} a été supprimée de la table {table} avec succès.", "Gestion Restaurant");
+                        //MessageBox.Show($"La colonne {id} a été supprimée de la table {table} avec succès.", "Zakaria Location");
                     }
                 }
             }
@@ -101,7 +101,7 @@ namespace Zakaria_Location
             catch (Exception ex)
             {
                 Console.WriteLine($"Erreur lors de la récupération des données : {ex.Message}");
-                MessageBox.Show($"Erreur lors de la récupération des données .{ex.Message}", "Gestion Restaurant");
+                MessageBox.Show($"Erreur lors de la récupération des données .{ex.Message}", "Zakaria Location");
             }
 
             return dataTable;
@@ -127,7 +127,7 @@ namespace Zakaria_Location
             catch (Exception ex)
             {
                 Console.WriteLine("Erreur lors de l'exécution de la requête : " + ex.Message);
-                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Gestion Restaurant");
+                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Zakaria Location");
             }
             finally
             {
@@ -137,46 +137,104 @@ namespace Zakaria_Location
 
 
         }
-       /* public static void chartReservation(Chart chart)
+        /* public static void chartReservation(Chart chart)
+         {
+             try
+             {
+                 OpenConnection(); // Ouvrir la connexion à la base de données
+
+                 string query = "SELECT MONTH(date_reservation) AS Mois, COUNT(*) AS NombreReservations " +
+                                "FROM reservation " +
+                                "WHERE YEAR(date_reservation) = YEAR(CURRENT_DATE()) " +
+                 "GROUP BY MONTH(date_reservation)";
+
+                 MySqlCommand command = new MySqlCommand(query, cnx);
+                 MySqlDataReader reader = command.ExecuteReader();
+
+                 // Effacer toutes les séries de données existantes dans le graphique
+                 chart.Series.Clear();
+
+                 // Ajouter une nouvelle série de données au graphique
+                 chart.Series.Add("Nombre de réservations par mois");
+
+                 // Ajouter les données récupérées à la série
+                 while (reader.Read())
+                 {
+                     string mois = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(reader.GetInt32("Mois"));
+                     int nombreReservations = reader.GetInt32("NombreReservations");
+                     chart.Series["Nombre de réservations par mois"].Points.AddXY(mois, nombreReservations);
+                 }
+
+                 // Titre du graphique
+                 chart.Titles.Add("Nombre de réservations effectuées chaque mois cette année");
+
+                 // Actualiser le graphique
+                 chart.Update();
+
+                 reader.Close();
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine("Erreur lors de l'exécution de la requête : " + ex.Message);
+                 MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Zakaria Location");
+             }
+             finally
+             {
+                 if (cnx.State == System.Data.ConnectionState.Open)
+                     cnx.Close(); // Fermer la connexion à la base de données après utilisation
+             }
+
+
+         }*/
+
+        public static void AfficherImageAdmin(PictureBox pictureBox)
         {
             try
             {
                 OpenConnection(); // Ouvrir la connexion à la base de données
 
-                string query = "SELECT MONTH(date_reservation) AS Mois, COUNT(*) AS NombreReservations " +
-                               "FROM reservation " +
-                               "WHERE YEAR(date_reservation) = YEAR(CURRENT_DATE()) " +
-                "GROUP BY MONTH(date_reservation)";
-
+                string query = "SELECT logo FROM admin WHERE id = @Id"; // Requête SQL pour récupérer le chemin de l'image de la table admin
                 MySqlCommand command = new MySqlCommand(query, cnx);
-                MySqlDataReader reader = command.ExecuteReader();
+                command.Parameters.AddWithValue("@Id", 1); // Remplacer 1 par l'ID de l'admin dont vous voulez afficher l'image
 
-                // Effacer toutes les séries de données existantes dans le graphique
-                chart.Series.Clear();
+                // Récupérer le chemin de l'image à partir de la base de données
+                string imagePath = (string)command.ExecuteScalar();
 
-                // Ajouter une nouvelle série de données au graphique
-                chart.Series.Add("Nombre de réservations par mois");
+                pictureBox.Load(@"C:\laragon\www\zakaria location\assets\img\logo\" + imagePath);
 
-                // Ajouter les données récupérées à la série
-                while (reader.Read())
-                {
-                    string mois = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(reader.GetInt32("Mois"));
-                    int nombreReservations = reader.GetInt32("NombreReservations");
-                    chart.Series["Nombre de réservations par mois"].Points.AddXY(mois, nombreReservations);
-                }
-
-                // Titre du graphique
-                chart.Titles.Add("Nombre de réservations effectuées chaque mois cette année");
-
-                // Actualiser le graphique
-                chart.Update();
-
-                reader.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erreur lors de l'exécution de la requête : " + ex.Message);
-                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Gestion Restaurant");
+                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Zakaria Location");
+            }
+            finally
+            {
+                if (cnx.State == System.Data.ConnectionState.Open)
+                    cnx.Close(); // Fermer la connexion à la base de données après utilisation
+            }
+        }
+
+        public static void NomApplication(Label label)
+        {
+            try
+            {
+                OpenConnection(); // Ouvrir la connexion à la base de données
+
+                string query = "SELECT nom_app FROM admin WHERE id = @Id"; // Requête SQL pour récupérer le chemin de l'image de la table admin
+                MySqlCommand command = new MySqlCommand(query, cnx);
+                command.Parameters.AddWithValue("@Id", 1); // Remplacer 1 par l'ID de l'admin dont vous voulez afficher l'image
+
+                // Récupérer le chemin de l'image à partir de la base de données
+                string nom_app = (string)command.ExecuteScalar();
+
+                label.Text= nom_app;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur lors de l'exécution de la requête : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Zakaria Location");
             }
             finally
             {
@@ -185,7 +243,7 @@ namespace Zakaria_Location
             }
 
 
-        }*/
+        }
 
 
         public static void AfficherReservationsPourDemain(Label label)
@@ -212,7 +270,7 @@ namespace Zakaria_Location
             catch (Exception ex)
             {
                 Console.WriteLine("Erreur lors de l'exécution de la requête : " + ex.Message);
-                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Gestion Restaurant");
+                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Zakaria Location");
             }
             finally
             {

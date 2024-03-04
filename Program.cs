@@ -16,7 +16,7 @@ namespace Zakaria_Location
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormVoiture());
+            Application.Run(new FormClient());
         }
     }
 }
