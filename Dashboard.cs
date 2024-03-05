@@ -30,5 +30,43 @@ namespace Zakaria_Location
             this.Hide();
             emp.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            FormLocation emp = new FormLocation();
+            this.Hide();
+            emp.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            FormClient emp = new FormClient();
+            this.Hide();
+            emp.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            FormProfil emp = new FormProfil();
+            this.Hide();
+            emp.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Voulez-Vous Se Déconnecter??", "Gestion Location De Voiture", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FormLogin emp = new FormLogin();
+            this.Hide();
+            emp.Show();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormSetting emp = new FormSetting();
+            this.Hide();
+            emp.Show();
+        }
     }
 }

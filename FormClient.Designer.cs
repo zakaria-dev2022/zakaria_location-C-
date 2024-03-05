@@ -51,15 +51,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ph_cin = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ph_cin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ph_cin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ph_cin)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_cin
@@ -302,6 +302,27 @@
             this.panel1.Size = new System.Drawing.Size(1375, 100);
             this.panel1.TabIndex = 81;
             // 
+            // exit
+            // 
+            this.exit.Image = global::Zakaria_Location.Properties.Resources.cross;
+            this.exit.Location = new System.Drawing.Point(1188, 25);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(61, 52);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit.TabIndex = 48;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Zakaria_Location.Properties.Resources.multiple_users_silhouette;
+            this.pictureBox1.Location = new System.Drawing.Point(78, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
@@ -321,26 +342,6 @@
             this.ph_cin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ph_cin.TabIndex = 102;
             this.ph_cin.TabStop = false;
-            // 
-            // exit
-            // 
-            this.exit.Image = global::Zakaria_Location.Properties.Resources.cross;
-            this.exit.Location = new System.Drawing.Point(1235, 25);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(61, 52);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit.TabIndex = 48;
-            this.exit.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Zakaria_Location.Properties.Resources.multiple_users_silhouette;
-            this.pictureBox1.Location = new System.Drawing.Point(78, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
             // 
             // FormClient
             // 
@@ -379,9 +380,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ph_cin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ph_cin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -70,8 +70,8 @@ namespace Zakaria_Location
                 Image img = Image.FromFile(ofd.FileName);
                 string typeFile = Path.GetExtension(ofd.FileName);
                 visite.Image = img;
-                lb_a.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} -" + txtmt.Text + " De Type " + txtnv.Text + typeFile;
-                chemin = lb_a.Text;
+                lb_vt.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} -" + txtmt.Text + " De Type " + txtnv.Text + typeFile;
+                chemin = lb_vt.Text;
                 //lb_vt.Text = chemin;
                 //chemin =txtmt.Text + " Photo voiture" : typeFile;
                 //File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
@@ -98,15 +98,21 @@ namespace Zakaria_Location
             }
         }
 
+
+
         void remplir()
         {
             Utils.CloseConnection();
             //Connection dbOperations = new Connection();
-            DataTable dataTable = Utils.ObtenirDonnees("select * from voiture ");
+            DataTable dataTable = Utils.ObtenirDonnees("SELECT v.id as N°Voiture,m.type as Type_voiture,m.id as N°Marque,v.nom_voiture,v.matricule,v.type_boite_vitesse,v.type_carburant,v.model,v.prix,v.assurance,v.carte_grise,v.visite,v.ph_voiture\r\nFROM voiture v \r\nJOIN type_marque m on v.id_marque=m.id ");
             //DataTable dataTable = Utils.ObtenirDonnees("select * from produit");
             // Lier le DataTable au DataGridView
             tableau.DataSource = dataTable;
-
+            tableau.Columns["N°Marque"].Visible = false;
+            tableau.Columns["assurance"].Visible = false;
+            tableau.Columns["carte_grise"].Visible = false;
+            tableau.Columns["visite"].Visible = false;
+            tableau.Columns["ph_voiture"].Visible = false;
         }
 
         public void remplir_txttp()
@@ -128,12 +134,15 @@ namespace Zakaria_Location
         void nouveau()
         {
             Utils.CloseConnection();
+            txtid.Text = "";
+            txtid_marque.Text = "";
             txtm.Text = "";
             txtnv.Text = "";
             txtmt.Text = "";
             txtbv.Text = "";
             txttc.Text = "";
             txtm.Text = "";
+            txtmd.Text = "";
             txtp.Text = "";
             lb_v.Text = "";
             lb_cg.Text = "";
@@ -180,7 +189,7 @@ namespace Zakaria_Location
             txtid_marque.Text=id_type_produit.ToString();
             Voiture voiture = new Voiture(int.Parse(txtid_marque.Text), txtnv.Text,txtmt.Text,txtbv.Text,txttc.Text, int.Parse(txtmd.Text), float.Parse(txtp.Text),lb_a.Text,lb_cg.Text,lb_vt.Text,lb_v.Text);
             Voiture.ajoutervoiture(voiture);
-          //  nouveau();
+            nouveau();
             //Connection.CloseConnection();
             remplir();
             ajouter.Enabled = true;
@@ -194,6 +203,66 @@ namespace Zakaria_Location
             Dashboard dashboard=new Dashboard();
             this.Hide();
             dashboard.Show();
+        }
+
+        private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int n = tableau.Rows.Count - 1;
+            if (e.RowIndex >= 0 && e.RowIndex < n)
+            {
+                DataGridViewRow row = tableau.Rows[e.RowIndex];
+                txtid.Text = row.Cells["N°Voiture"].Value.ToString();
+                txtid_marque.Text = row.Cells["N°Marque"].Value.ToString();
+                txtnv.Text = row.Cells["nom_voiture"].Value.ToString();
+                txtmt.Text = row.Cells["matricule"].Value.ToString();
+                txtbv.Text = row.Cells["type_boite_vitesse"].Value.ToString();
+                txttc.Text = row.Cells["type_carburant"].Value.ToString();
+                txtm.Text = row.Cells["type_voiture"].Value.ToString();
+                txtmd.Text = row.Cells["model"].Value.ToString();
+                txtp.Text = row.Cells["prix"].Value.ToString();
+                lb_a.Text = row.Cells["assurance"].Value.ToString();
+                lb_cg.Text = row.Cells["carte_grise"].Value.ToString();
+                lb_v.Text = row.Cells["ph_voiture"].Value.ToString();
+                lb_vt.Text = row.Cells["visite"].Value.ToString();
+                assurance.Image = Image.FromFile(@"C:\laragon\www\zakaria location\assets\img\assurance\" + lb_a.Text);
+                carte_grise.Image = Image.FromFile(@"C:\laragon\www\zakaria location\assets\img\carte_grise\" + lb_cg.Text);
+                ph_voiture.Image = Image.FromFile(@"C:\laragon\www\zakaria location\assets\img\voiture\" + lb_v.Text);
+                visite.Image = Image.FromFile(@"C:\laragon\www\zakaria location\assets\img\visite\" + lb_vt.Text);
+                ajouter.Enabled = false;
+                modifier.Enabled = true;
+                supprimer.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
+                txtid.Text = "";
+                nouveau();
+                ajouter.Enabled = true;
+                modifier.Enabled = false;
+                supprimer.Enabled = false;
+            }
+        }
+
+        private void modifier_Click(object sender, EventArgs e)
+        {
+            if (txtnv.Text != "" && txtmt.Text != "" && txtbv.Text != "" && txttc.Text != "" && txtm.Text != "" && txtmd.Text != "" && txtp.Text != "" && assurance.Image != null && ph_voiture.Image != null && visite.Image != null && carte_grise.Image != null)
+            {
+                Voiture voiture = new Voiture(int.Parse(txtid_marque.Text), txtnv.Text, txtmt.Text, txtbv.Text, txttc.Text, int.Parse(txtmd.Text), float.Parse(txtp.Text), lb_a.Text, lb_cg.Text, lb_vt.Text, lb_v.Text);
+                int id = int.Parse(txtid.Text);
+                Voiture.ModifierVoiture(voiture,id);
+                nouveau();
+                remplir();
+                ajouter.Enabled = true;
+                modifier.Enabled = false;
+                supprimer.Enabled = false;
+            }
+        }
+
+
+        private void txtm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           int id= TransferTypeInt();
+            txtid_marque.Text= id.ToString();
         }
     }
 }

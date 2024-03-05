@@ -32,13 +32,13 @@
             this.lb_na = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -90,17 +90,17 @@
             this.panel8.Size = new System.Drawing.Size(345, 100);
             this.panel8.TabIndex = 5;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(47, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Gestion Des Voitures";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(47, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(232, 28);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Gestion Des Profils";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel7
             // 
@@ -110,26 +110,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(345, 100);
             this.panel7.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(47, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Gestion Des Clients";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 264);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(345, 100);
-            this.panel6.TabIndex = 3;
             // 
             // label3
             // 
@@ -141,6 +121,28 @@
             this.label3.Size = new System.Drawing.Size(244, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Gestion De Location";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 264);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(345, 100);
+            this.panel6.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(47, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(238, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Gestion Des Clients";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel5
             // 
@@ -151,16 +153,17 @@
             this.panel5.Size = new System.Drawing.Size(345, 100);
             this.panel5.TabIndex = 2;
             // 
-            // label4
+            // label1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(47, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(232, 28);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Gestion Des Profils";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(47, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Gestion Des Voitures";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel4
             // 
@@ -181,6 +184,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label5
             // 
@@ -192,6 +196,7 @@
             this.label5.Size = new System.Drawing.Size(191, 28);
             this.label5.TabIndex = 4;
             this.label5.Text = "Se Déconnecter";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel3
             // 

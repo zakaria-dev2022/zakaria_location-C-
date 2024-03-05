@@ -105,7 +105,7 @@ namespace Zakaria_Location
                 {
                     Utils.OpenConnection();
 
-                    string query = "UPDATE voiture SET id_marque = @id_marque,nom_voiture = @nom_voiture,matricule = @matricule,type_boite_vitesse=@type_boite_vitesse,type_carburant=@type_carburant,mode=@model ,prix = @prix,assurance = @assurance,carte_grise=@carte_grise,visite=@visite,ph_voiture=@ph_voiture WHERE id = @id";
+                    string query = "UPDATE voiture SET id_marque = @id_marque,nom_voiture = @nom_voiture,matricule = @matricule,type_boite_vitesse=@type_boite_vitesse,type_carburant=@type_carburant,model=@model ,prix = @prix,assurance = @assurance,carte_grise=@carte_grise,visite=@visite,ph_voiture=@ph_voiture WHERE id = @id";
 
 
                     MySqlCommand command = new MySqlCommand(query, Utils.cnx);
