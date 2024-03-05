@@ -262,12 +262,13 @@
             // txtid
             // 
             this.txtid.BackColor = System.Drawing.Color.White;
-            this.txtid.Location = new System.Drawing.Point(489, 119);
+            this.txtid.Location = new System.Drawing.Point(319, 110);
             this.txtid.Margin = new System.Windows.Forms.Padding(4);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
             this.txtid.Size = new System.Drawing.Size(72, 26);
             this.txtid.TabIndex = 136;
+            this.txtid.Visible = false;
             // 
             // txtm
             // 
@@ -338,6 +339,7 @@
             this.supprimer.TabIndex = 142;
             this.supprimer.Text = "Supprimer";
             this.supprimer.UseVisualStyleBackColor = false;
+            this.supprimer.Click += new System.EventHandler(this.supprimer_Click);
             // 
             // lb_vt
             // 
@@ -414,12 +416,13 @@
             // txtid_marque
             // 
             this.txtid_marque.BackColor = System.Drawing.Color.White;
-            this.txtid_marque.Location = new System.Drawing.Point(489, 149);
+            this.txtid_marque.Location = new System.Drawing.Point(319, 149);
             this.txtid_marque.Margin = new System.Windows.Forms.Padding(4);
             this.txtid_marque.Name = "txtid_marque";
             this.txtid_marque.ReadOnly = true;
             this.txtid_marque.Size = new System.Drawing.Size(72, 26);
             this.txtid_marque.TabIndex = 149;
+            this.txtid_marque.Visible = false;
             // 
             // assurance
             // 

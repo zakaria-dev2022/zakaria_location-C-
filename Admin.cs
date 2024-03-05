@@ -30,7 +30,7 @@ namespace Zakaria_Location
 
         }
 
-        public static void ModifierAdmin(Admin Admin, int id)
+        public static void ModifierAdmin(Admin Admin)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Zakaria_Location
                 {
                     Utils.OpenConnection();
 
-                    string query = "UPDATE Admin SET nom = @nom, prenom = @prenom,email = @email, mot_de_passe = @mot_de_passe,nom_app=@nom_app,logo = @logo WHERE id = @id";
+                    string query = "UPDATE Admin SET nom = @nom, prenom = @prenom,login = @email, mot_de_passe = @mot_de_passe,nom_app=@nom_app,logo = @logo WHERE id =1";
 
 
                     MySqlCommand command = new MySqlCommand(query, Utils.cnx);
@@ -49,7 +49,7 @@ namespace Zakaria_Location
                         command.Parameters.AddWithValue("@mot_de_passe", Admin.mot_de_passe);
                         command.Parameters.AddWithValue("@nom_app", Admin.nom_app);
                         command.Parameters.AddWithValue("@logo", Admin.logo);
-                        command.Parameters.AddWithValue("@id", id);
+                        //command.Parameters.AddWithValue("@id", id);
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Modification effectuée avec succès", "Zakaria Location");
