@@ -71,10 +71,10 @@ namespace Zakaria_Location
             try
             {
 
-                {
+                { 
                     Utils.OpenConnection();
 
-                    string query = "UPDATE client SET nom = @Nom, prenom = @Prenom,cin = @cin,permis = @permis, tel = @tel, email = @email, mot_de_passe = @mot_de_passe, ph_cin = @ph_cin, WHERE id = @id";
+                    string query = "UPDATE client SET nom = @Nom, prenom = @Prenom , cin = @cin , permis = @permis, tel = @tel, email = @email, mot_de_passe = @mot_de_passe, ph_cin = @ph_cin WHERE id = @id";
 
 
                     MySqlCommand command = new MySqlCommand(query, Utils.cnx);
@@ -86,6 +86,7 @@ namespace Zakaria_Location
                         command.Parameters.AddWithValue("@tel", Client.tel);
                         command.Parameters.AddWithValue("@email", Client.email);
                         command.Parameters.AddWithValue("@mot_de_passe", Client.mot_de_passe);
+                        command.Parameters.AddWithValue("@ph_cin", Client.ph_cin);
                         command.Parameters.AddWithValue("@id", id);
 
                         command.ExecuteNonQuery();

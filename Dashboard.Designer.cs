@@ -191,7 +191,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 29);
+            this.label5.Location = new System.Drawing.Point(21, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(191, 28);
             this.label5.TabIndex = 4;

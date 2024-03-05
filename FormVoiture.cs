@@ -264,5 +264,20 @@ namespace Zakaria_Location
            int id= TransferTypeInt();
             txtid_marque.Text= id.ToString();
         }
+
+        private void supprimer_Click(object sender, EventArgs e)
+        {
+            Utils.CloseConnection();
+            if (MessageBox.Show("Voulez-vous suprimer Cette Voiture?", "Zakaria Location", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Utils.SuprimerDonner("voiture", txtid.Text);
+                MessageBox.Show("Supression Avec Success", "Zakaria Location");
+                remplir();
+                nouveau();
+                ajouter.Enabled = true;
+                modifier.Enabled = false;
+                supprimer.Enabled = false;
+            }
+        }
     }
 }

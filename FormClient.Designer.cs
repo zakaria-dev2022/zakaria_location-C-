@@ -91,7 +91,7 @@
             this.ajouter.BackColor = System.Drawing.Color.Teal;
             this.ajouter.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajouter.ForeColor = System.Drawing.Color.White;
-            this.ajouter.Location = new System.Drawing.Point(1028, 289);
+            this.ajouter.Location = new System.Drawing.Point(1028, 206);
             this.ajouter.Margin = new System.Windows.Forms.Padding(4);
             this.ajouter.Name = "ajouter";
             this.ajouter.Size = new System.Drawing.Size(194, 44);
@@ -113,19 +113,22 @@
             this.modifier.TabIndex = 98;
             this.modifier.Text = "Modifier";
             this.modifier.UseVisualStyleBackColor = false;
+            this.modifier.Click += new System.EventHandler(this.modifier_Click);
             // 
             // supprimer
             // 
             this.supprimer.BackColor = System.Drawing.Color.Teal;
+            this.supprimer.Enabled = false;
             this.supprimer.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supprimer.ForeColor = System.Drawing.Color.White;
-            this.supprimer.Location = new System.Drawing.Point(1028, 215);
+            this.supprimer.Location = new System.Drawing.Point(1028, 267);
             this.supprimer.Margin = new System.Windows.Forms.Padding(4);
             this.supprimer.Name = "supprimer";
             this.supprimer.Size = new System.Drawing.Size(194, 44);
             this.supprimer.TabIndex = 97;
             this.supprimer.Text = "Supprimer";
             this.supprimer.UseVisualStyleBackColor = false;
+            this.supprimer.Click += new System.EventHandler(this.supprimer_Click);
             // 
             // label3
             // 
@@ -185,6 +188,7 @@
             this.tableau.RowTemplate.Height = 28;
             this.tableau.Size = new System.Drawing.Size(1260, 249);
             this.tableau.TabIndex = 94;
+            this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick);
             // 
             // label6
             // 
@@ -236,6 +240,7 @@
             this.txtnc.Name = "txtnc";
             this.txtnc.Size = new System.Drawing.Size(182, 26);
             this.txtnc.TabIndex = 85;
+            this.txtnc.TextChanged += new System.EventHandler(this.txtnc_TextChanged);
             // 
             // txtp
             // 
@@ -246,7 +251,7 @@
             // 
             // txtn
             // 
-            this.txtn.Location = new System.Drawing.Point(329, 140);
+            this.txtn.Location = new System.Drawing.Point(328, 136);
             this.txtn.Name = "txtn";
             this.txtn.Size = new System.Drawing.Size(182, 26);
             this.txtn.TabIndex = 83;
@@ -260,7 +265,7 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(401, 140);
+            this.txtid.Location = new System.Drawing.Point(425, 136);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(85, 26);
             this.txtid.TabIndex = 26;
@@ -377,6 +382,7 @@
             this.Name = "FormClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormClient";
+            this.Load += new System.EventHandler(this.FormClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

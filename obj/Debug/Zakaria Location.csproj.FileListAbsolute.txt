@@ -43,3 +43,5 @@ C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria Location.exe
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria Location.pdb
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.Dashboard.resources
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormClient.resources
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormProfil.resources
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormSetting.resources

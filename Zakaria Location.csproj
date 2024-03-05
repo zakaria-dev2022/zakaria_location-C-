@@ -153,6 +153,12 @@
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProfil.resx">
+      <DependentUpon>FormProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormVoiture.resx">
       <DependentUpon>FormVoiture.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\multiple-users-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
