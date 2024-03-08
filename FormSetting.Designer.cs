@@ -39,21 +39,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.oeil_mp = new System.Windows.Forms.PictureBox();
-            this.logo = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_logo = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.txtn = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtp = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.oeil_mp = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oeil_mp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -74,7 +75,7 @@
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 28F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(216, 14);
+            this.label1.Location = new System.Drawing.Point(143, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 66);
@@ -84,7 +85,7 @@
             // txtna
             // 
             this.txtna.BackColor = System.Drawing.Color.White;
-            this.txtna.Location = new System.Drawing.Point(284, 208);
+            this.txtna.Location = new System.Drawing.Point(281, 225);
             this.txtna.Multiline = true;
             this.txtna.Name = "txtna";
             this.txtna.Size = new System.Drawing.Size(253, 26);
@@ -93,7 +94,7 @@
             // txtmp
             // 
             this.txtmp.BackColor = System.Drawing.Color.White;
-            this.txtmp.Location = new System.Drawing.Point(284, 324);
+            this.txtmp.Location = new System.Drawing.Point(281, 341);
             this.txtmp.Name = "txtmp";
             this.txtmp.PasswordChar = '*';
             this.txtmp.Size = new System.Drawing.Size(253, 26);
@@ -102,7 +103,7 @@
             // txte
             // 
             this.txte.BackColor = System.Drawing.Color.White;
-            this.txte.Location = new System.Drawing.Point(284, 269);
+            this.txte.Location = new System.Drawing.Point(281, 286);
             this.txte.Name = "txte";
             this.txte.Size = new System.Drawing.Size(253, 26);
             this.txte.TabIndex = 4;
@@ -110,7 +111,7 @@
             // lb_logo
             // 
             this.lb_logo.AutoSize = true;
-            this.lb_logo.Location = new System.Drawing.Point(465, 411);
+            this.lb_logo.Location = new System.Drawing.Point(858, 208);
             this.lb_logo.Name = "lb_logo";
             this.lb_logo.Size = new System.Drawing.Size(51, 20);
             this.lb_logo.TabIndex = 107;
@@ -122,7 +123,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(40, 381);
+            this.label2.Location = new System.Drawing.Point(672, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 26);
             this.label2.TabIndex = 113;
@@ -133,7 +134,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(40, 208);
+            this.label3.Location = new System.Drawing.Point(37, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(224, 26);
             this.label3.TabIndex = 112;
@@ -144,7 +145,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(40, 267);
+            this.label4.Location = new System.Drawing.Point(37, 284);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 26);
             this.label4.TabIndex = 111;
@@ -155,59 +156,18 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(40, 322);
+            this.label10.Location = new System.Drawing.Point(37, 339);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(161, 26);
             this.label10.TabIndex = 110;
             this.label10.Text = "Mot De Passe";
-            // 
-            // oeil_mp
-            // 
-            this.oeil_mp.Location = new System.Drawing.Point(560, 324);
-            this.oeil_mp.Name = "oeil_mp";
-            this.oeil_mp.Size = new System.Drawing.Size(38, 27);
-            this.oeil_mp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.oeil_mp.TabIndex = 106;
-            this.oeil_mp.TabStop = false;
-            this.oeil_mp.Click += new System.EventHandler(this.oeil_mp_Click);
-            // 
-            // logo
-            // 
-            this.logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logo.Location = new System.Drawing.Point(284, 366);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(253, 153);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo.TabIndex = 103;
-            this.logo.TabStop = false;
-            // 
-            // exit
-            // 
-            this.exit.Image = global::Zakaria_Location.Properties.Resources.cross;
-            this.exit.Location = new System.Drawing.Point(784, 12);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(61, 70);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit.TabIndex = 46;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(54, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
             // 
             // btn_logo
             // 
             this.btn_logo.BackColor = System.Drawing.Color.Teal;
             this.btn_logo.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logo.ForeColor = System.Drawing.Color.White;
-            this.btn_logo.Location = new System.Drawing.Point(322, 539);
+            this.btn_logo.Location = new System.Drawing.Point(715, 336);
             this.btn_logo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_logo.Name = "btn_logo";
             this.btn_logo.Size = new System.Drawing.Size(168, 44);
@@ -221,7 +181,7 @@
             this.btn_save.BackColor = System.Drawing.Color.Teal;
             this.btn_save.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(718, 539);
+            this.btn_save.Location = new System.Drawing.Point(366, 402);
             this.btn_save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(168, 44);
@@ -233,7 +193,7 @@
             // txtn
             // 
             this.txtn.BackColor = System.Drawing.Color.White;
-            this.txtn.Location = new System.Drawing.Point(284, 119);
+            this.txtn.Location = new System.Drawing.Point(281, 136);
             this.txtn.Multiline = true;
             this.txtn.Name = "txtn";
             this.txtn.Size = new System.Drawing.Size(253, 26);
@@ -244,7 +204,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(40, 119);
+            this.label5.Location = new System.Drawing.Point(37, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 26);
             this.label5.TabIndex = 119;
@@ -253,7 +213,7 @@
             // txtp
             // 
             this.txtp.BackColor = System.Drawing.Color.White;
-            this.txtp.Location = new System.Drawing.Point(284, 163);
+            this.txtp.Location = new System.Drawing.Point(281, 180);
             this.txtp.Multiline = true;
             this.txtp.Name = "txtp";
             this.txtp.Size = new System.Drawing.Size(253, 26);
@@ -264,18 +224,71 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(40, 163);
+            this.label6.Location = new System.Drawing.Point(37, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 26);
             this.label6.TabIndex = 121;
             this.label6.Text = "Prenom";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.ForeColor = System.Drawing.Color.Teal;
+            this.panel1.Location = new System.Drawing.Point(0, 553);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(960, 48);
+            this.panel1.TabIndex = 122;
+            // 
+            // oeil_mp
+            // 
+            this.oeil_mp.Image = global::Zakaria_Location.Properties.Resources.hide;
+            this.oeil_mp.Location = new System.Drawing.Point(540, 341);
+            this.oeil_mp.Name = "oeil_mp";
+            this.oeil_mp.Size = new System.Drawing.Size(53, 27);
+            this.oeil_mp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.oeil_mp.TabIndex = 106;
+            this.oeil_mp.TabStop = false;
+            this.oeil_mp.Click += new System.EventHandler(this.oeil_mp_Click);
+            // 
+            // logo
+            // 
+            this.logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.logo.Location = new System.Drawing.Point(677, 163);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(253, 153);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 103;
+            this.logo.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(45, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(106, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            // 
+            // exit
+            // 
+            this.exit.Image = global::Zakaria_Location.Properties.Resources.cross;
+            this.exit.Location = new System.Drawing.Point(822, 16);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(69, 53);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit.TabIndex = 46;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // FormSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(960, 630);
+            this.ClientSize = new System.Drawing.Size(960, 601);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtp);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtn);
@@ -302,8 +315,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oeil_mp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,5 +344,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtp;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
     }
 }

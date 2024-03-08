@@ -68,5 +68,12 @@ namespace Zakaria_Location
             this.Hide();
             emp.Show();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            FormCommentaire commentaire = new FormCommentaire();
+            this.Hide();
+            commentaire.Show();
+        }
     }
 }

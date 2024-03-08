@@ -45,3 +45,7 @@ C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.Dashbo
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormClient.resources
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormProfil.resources
 C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormSetting.resources
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormCommentaire.resources
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormLocation.resources
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormLogin.resources
+C:\Users\Zakaria\source\repos\Zakaria Location\obj\Debug\Zakaria_Location.FormChargement.resources

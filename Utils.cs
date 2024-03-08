@@ -81,7 +81,32 @@ namespace Zakaria_Location
             }
         }
 
+        public static void obtenirNomApp(Label label)
+        {
+            try
+            {
+                OpenConnection(); // Ouvrir la connexion à la base de données
 
+                string query = $"SELECT nom_app FROM admin where id =1 "; // Requête SQL pour compter les employés
+
+                MySqlCommand command = new MySqlCommand(query, cnx);
+                string appName = command.ExecuteScalar()?.ToString(); // Exécutez la requête et récupérez le nom de l'application
+                label.Text=appName;
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur lors de l'exécution de la requête : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Gestion Restaurant");
+            }
+            finally
+            {
+                if (cnx.State == System.Data.ConnectionState.Open)
+                    cnx.Close(); // Fermer la connexion à la base de données après utilisation
+            }
+
+
+        }
 
         public static DataTable ObtenirDonnees(string query)
         {
