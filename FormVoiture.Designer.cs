@@ -79,20 +79,20 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 833);
+            this.panel2.Location = new System.Drawing.Point(0, 892);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1392, 48);
+            this.panel2.Size = new System.Drawing.Size(1409, 41);
             this.panel2.TabIndex = 117;
             // 
             // tableau
             // 
             this.tableau.BackgroundColor = System.Drawing.Color.White;
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableau.Location = new System.Drawing.Point(48, 504);
+            this.tableau.Location = new System.Drawing.Point(73, 520);
             this.tableau.Name = "tableau";
             this.tableau.RowHeadersWidth = 62;
             this.tableau.RowTemplate.Height = 28;
-            this.tableau.Size = new System.Drawing.Size(1250, 339);
+            this.tableau.Size = new System.Drawing.Size(1250, 308);
             this.tableau.TabIndex = 105;
             this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick);
             // 
@@ -116,7 +116,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1392, 80);
+            this.panel1.Size = new System.Drawing.Size(1409, 80);
             this.panel1.TabIndex = 102;
             // 
             // exit
@@ -496,7 +496,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1392, 881);
+            this.ClientSize = new System.Drawing.Size(1409, 933);
             this.Controls.Add(this.txttc);
             this.Controls.Add(this.txtbv);
             this.Controls.Add(this.btn_a);

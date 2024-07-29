@@ -8,6 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace Zakaria_Location
 {
@@ -27,7 +28,7 @@ namespace Zakaria_Location
         public int TransferTypeInt()
         {
             Utils.CloseConnection();
-            DataTable dataTable = Utils.ObtenirDonnees("select id from voiture where matricule = '" + txtm.Text + "'");
+            DataTable dataTable = Utils.ObtenirDonnees("select id from reservation where matricule = '" + txtm.Text + "'");
 
             if (dataTable.Rows.Count > 0)
             {
@@ -124,11 +125,13 @@ namespace Zakaria_Location
         {
             Utils.CloseConnection();
             //Connection dbOperations = new Connection();
-            DataTable dataTable = Utils.ObtenirDonnees("SELECT * FROM reservation  ");
+            DataTable dataTable = Utils.ObtenirDonnees("SELECT r.id as N°Location,v.matricule ,c.cin,c.id as id_client,v.id as id_voiture,r.date_debut ,r.date_fin ,r.montant  from reservation r\r\njoin client c on r.client_id =c.id \r\nJOIN voiture v on r.voiture_id=v.id ");
             //DataTable dataTable = Utils.ObtenirDonnees("SELECT v.id as N°Voiture,m.type as Type_voiture,m.id as N°Marque,v.nom_voiture,v.matricule,v.type_boite_vitesse,v.type_carburant,v.model,v.prix,v.assurance,v.carte_grise,v.visite,v.ph_voiture\r\nFROM voiture v \r\nJOIN type_marque m on v.id_marque=m.id ");
             //DataTable dataTable = Utils.ObtenirDonnees("select * from produit");
             // Lier le DataTable au DataGridView
             tableau.DataSource = dataTable;
+            tableau.Columns["id_client"].Visible = false;
+            tableau.Columns["id_voiture"].Visible = false;
         }
 
         void nouveau()
@@ -151,6 +154,7 @@ namespace Zakaria_Location
             remplir_txttp();
             remplir_txttp_client();
             remplir();
+
         }
 
         private void txtm_SelectedIndexChanged(object sender, EventArgs e)
@@ -194,18 +198,84 @@ namespace Zakaria_Location
             ajouter.Enabled = true;
             modifier.Enabled = false;
             //supprimer.Enabled = false;*/
+            MessageBox.Show(txtm.Text);
+
 
             int voitureId = Convert.ToInt32(txtid_matricule.Text);
             int clientId = Convert.ToInt32(txtid_cin.Text);
             DateTime dateDebut = Convert.ToDateTime(txtdd.Text);
             DateTime dateFin = Convert.ToDateTime(txtdf.Text);
-            int montant = Convert.ToInt32(txtm.Text);
+            int montant = int.Parse(txtmt.Text);
 
             Reservation nouvelleReservation = new Reservation(voitureId, clientId, dateDebut, dateFin, montant);
 
             // Appeler la méthode pour ajouter la réservation à la base de données
            Reservation.ajouterReservation(nouvelleReservation);
+            nouveau();
 
+        }
+
+        private void modifier_Click(object sender, EventArgs e)
+        {
+            Utils.CloseConnection();
+            //int id_type_produit = TransferTypeInt();
+            int voitureId = Convert.ToInt32(txtid_matricule.Text);
+            int clientId = Convert.ToInt32(txtid_cin.Text);
+            DateTime dateDebut = Convert.ToDateTime(txtdd.Text);
+            DateTime dateFin = Convert.ToDateTime(txtdf.Text);
+            int montant = int.Parse(txtmt.Text);
+            Reservation produit = new Reservation(voitureId, clientId, dateDebut, dateFin, montant);
+            int id = int.Parse(txtid.Text);
+            Reservation.ModifierReservation(produit, id);
+            nouveau();
+            remplir();
+            ajouter.Enabled = false;
+            // pictureBox2.Enabled = false;
+            modifier.Enabled = true;
+           // supprimer.Enabled = true;
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
+
+        private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          /*  int n = tableau.Rows.Count - 1;
+            Utils.CloseConnection();
+            if (e.RowIndex >= 0 && e.RowIndex < n)
+            {
+                DataGridViewRow row = tableau.Rows[e.RowIndex];
+                txtid.Text = row.Cells["N°Location"].Value.ToString();
+
+                txtm.Text = row.Cells["matricule"].Value.ToString();
+                txtid_matricule.Text = row.Cells["id_voiture"].Value.ToString();
+                txtnc.Text = row.Cells["Cin"].Value.ToString();
+                txtid_cin.Text = row.Cells["id_client"].Value.ToString();
+                txtdd.Text = row.Cells["date_debut"].Value.ToString();
+                txtdf.Text = row.Cells["date_fin"].Value.ToString();
+                // string id_type_produit = row.Cells["type"].Value.ToString();
+                //string type_produit = TransferTypeString(id_type_produit);
+                //txttp.Text = type_produit;
+                txtmt.Text = row.Cells["montant"].Value.ToString();
+                ajouter.Enabled = false;
+                modifier.Enabled = true;
+                //Suprimer.Enabled = true;
+                //pictureBox2.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Aucun Element Selectionner", "Restaurantly");
+                txtid.Text = "";
+                nouveau();
+                ajouter.Enabled = true;
+                modifier.Enabled = false;
+                //Suprimer.Enabled = false;
+                //pictureBox2.Enabled = true;
+            }*/
         }
     }
 }

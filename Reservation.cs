@@ -73,7 +73,7 @@ namespace Zakaria_Location
                         command.Parameters.AddWithValue("@client_id", reservation.client_id);
                         command.Parameters.AddWithValue("@email", reservation.date_debut);
                         command.Parameters.AddWithValue("@mot_de_passe", reservation.date_fin);
-                        command.Parameters.AddWithValue("@voiture_id_app", reservation.montant);
+                        command.Parameters.AddWithValue("@montant", reservation.montant);
                         command.Parameters.AddWithValue("@id", id);
 
                         command.ExecuteNonQuery();

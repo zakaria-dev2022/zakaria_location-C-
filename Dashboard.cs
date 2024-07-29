@@ -19,9 +19,11 @@ namespace Zakaria_Location
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            Utils.NombreStatictique("client", lb_nc);
+            Utils.NombreStatictique("voiture", lb_np);
             Utils.AfficherImageAdmin(logo);
             Utils.NomApplication(lb_na);
-
+            Utils.nombreReclamation(lb_nr);
         }
 
         private void label1_Click(object sender, EventArgs e)

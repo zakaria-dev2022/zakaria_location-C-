@@ -46,6 +46,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.lb_np = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lb_nc = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lb_nr = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -56,6 +68,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_na
@@ -243,12 +261,150 @@
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Teal;
+            this.panel11.Controls.Add(this.lb_np);
+            this.panel11.Controls.Add(this.pictureBox3);
+            this.panel11.Controls.Add(this.label7);
+            this.panel11.Location = new System.Drawing.Point(663, 135);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(231, 146);
+            this.panel11.TabIndex = 8;
+            // 
+            // lb_np
+            // 
+            this.lb_np.AutoSize = true;
+            this.lb_np.BackColor = System.Drawing.Color.Teal;
+            this.lb_np.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lb_np.ForeColor = System.Drawing.Color.White;
+            this.lb_np.Location = new System.Drawing.Point(154, 55);
+            this.lb_np.Name = "lb_np";
+            this.lb_np.Size = new System.Drawing.Size(39, 43);
+            this.lb_np.TabIndex = 3;
+            this.lb_np.Text = "0";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Zakaria_Location.Properties.Resources.sports_car__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(24, 47);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(89, 65);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Teal;
+            this.label7.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(162, 19);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Nombre Des Voiture";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Teal;
+            this.panel10.Controls.Add(this.lb_nc);
+            this.panel10.Controls.Add(this.pictureBox1);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Location = new System.Drawing.Point(939, 135);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(231, 146);
+            this.panel10.TabIndex = 7;
+            // 
+            // lb_nc
+            // 
+            this.lb_nc.AutoSize = true;
+            this.lb_nc.BackColor = System.Drawing.Color.Teal;
+            this.lb_nc.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lb_nc.ForeColor = System.Drawing.Color.White;
+            this.lb_nc.Location = new System.Drawing.Point(154, 55);
+            this.lb_nc.Name = "lb_nc";
+            this.lb_nc.Size = new System.Drawing.Size(39, 43);
+            this.lb_nc.TabIndex = 3;
+            this.lb_nc.Text = "0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Zakaria_Location.Properties.Resources.multiple_users_silhouette;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Teal;
+            this.label8.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(3, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 19);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Nombre Des Clients";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Teal;
+            this.panel9.Controls.Add(this.lb_nr);
+            this.panel9.Controls.Add(this.pictureBox4);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Location = new System.Drawing.Point(370, 135);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(231, 146);
+            this.panel9.TabIndex = 6;
+            // 
+            // lb_nr
+            // 
+            this.lb_nr.AutoSize = true;
+            this.lb_nr.BackColor = System.Drawing.Color.Teal;
+            this.lb_nr.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lb_nr.ForeColor = System.Drawing.Color.White;
+            this.lb_nr.Location = new System.Drawing.Point(154, 58);
+            this.lb_nr.Name = "lb_nr";
+            this.lb_nr.Size = new System.Drawing.Size(39, 43);
+            this.lb_nr.TabIndex = 3;
+            this.lb_nr.Text = "0";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Zakaria_Location.Properties.Resources.report;
+            this.pictureBox4.Location = new System.Drawing.Point(24, 47);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(89, 65);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Teal;
+            this.label9.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(3, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(203, 19);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Nombre Des Reclamation";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1204, 697);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lb_na);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -272,6 +428,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +461,17 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label lb_np;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label lb_nc;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lb_nr;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label9;
     }
 }
